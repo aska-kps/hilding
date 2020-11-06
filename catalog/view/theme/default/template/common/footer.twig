@@ -1,0 +1,59 @@
+<footer class="footer">
+	<div class="Z_SECTION ">
+    <div class="popup failsearch" id="failsearch">
+	<span class="h4">Не нашли то, что искали?</span>
+	<p>
+		Оставьте свой контактный телефон, и наш специалист свяжется с вами
+	</p>
+	<form name="call_requests_form_main_failsearch" id="form_call_request__desktop_failsearch" action="/" method="post" class="cm-ajax cm-processed-form">
+		<div class="fieldset">
+			<div class="field f-text">
+				<label style="display:none" for="call_data_call_request__name_desktop_failsearch" class="cm-required"></label>
+				<input class="tx medium" placeholder="Имя *" id="call_data_call_request__name_desktop_failsearch" name="call_data[name]" type="text">
+			</div>
+		</div>
+		<div class="fieldset">
+			<div class="field f-text">
+				<label style="display:none" for="call_data_call_request__phone_desktop_failsearch" class="cm-required"></label>
+				<input class="tx medium" placeholder="Телефон *" id="call_data_call_request__phone_desktop_failsearch" name="call_data[phone]" type="text">
+			</div>
+		</div>
+		<div class="fieldset">
+			<div class="submit">
+				<button class="gbutton invert pad block" type="submit" name="dispatch[call_requests.request]">Отправить</button>
+			</div>
+		</div>
+	</form>
+
+<script>
+ $('body').delegate('.fancybox-inner #form_call_request__desktop_failsearch .submit button', 'click', function(e){
+
+                            function check_failed1() {
+                                var pole = $("body").find(".fancybox-inner .cm-failed-field");
+                                if (pole.length==0) {
+                                    dataLayer.push({'event':'callback-goodbye'});
+                                    $.fancybox.close();
+                                }
+
+                            }
+                            setTimeout(check_failed1, 2000);
+                        });
+</script>
+
+</div><div class="copyright-bar">
+	<div class="wrap cf" style="position: relative;">
+		<div class="copyright">
+			© 2012–2020 Hilding Anders Group
+<!--<div class="payments-icons">
+<img src="i/payments.png" alt="">
+		</div>-->
+		</div>
+		
+		<div class="developer">
+			Дизайн шаблонов&nbsp;&nbsp;
+			<span class="pse-link" data-link="http://art-performance.com/" target="_blank">Art’Performance
+		</span></div>
+	</div>
+</div>
+</div>
+</footer>

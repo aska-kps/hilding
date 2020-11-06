@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if IE 8 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie8"><![endif]-->
+<!--[if IE 9 ]><html dir="{{ direction }}" lang="{{ lang }}" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html dir="{{ direction }}" lang="{{ lang }}">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>{{ title }}</title>
+{% if robots %}
+<meta name="robots" content="{{ robots }}" />
+{% endif %}
+<base href="{{ base }}" />
+{% if description %}
+<meta name="description" content="{{ description }}" />
+{% endif %}
+{% if keywords %}
+<meta name="keywords" content="{{ keywords }}" />
+{% endif %}
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ og_url }}" />
+{% if og_image %}
+<meta property="og:image" content="{{ og_image }}" />
+{% else %}
+<meta property="og:image" content="{{ logo }}" />
+{% endif %}
+<meta property="og:site_name" content="{{ name }}" />
+<script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
+<link href="catalog/view/javascript/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+<script src="catalog/view/javascript/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
+<link href="catalog/view/theme/default/stylesheet/stylesheet.css" rel="stylesheet">
+{% for style in styles %}
+<link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+{% endfor %}
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<script src="catalog/view/javascript/common.js" type="text/javascript"></script>
+{% for link in links %}
+<link href="{{ link.href }}" rel="{{ link.rel }}" />
+{% endfor %}
+{% for analytic in analytics %}
+{{ analytic }}
+{% endfor %}
+</head>
+<body>
+<div class="Z_SECTION top-line">
+    <div class="Z_SECTION wrap cf">
+    <div class="region">
+    Алматы
+  <!-- 
+<a href="#cityselect-popup" class="city-popup">Не выбрано</a>
+            <div id="cityconfirm">
+            <div class="you-city">
+                <span>Ваш город: <a class="city-popup" href="#cityselect-popup"><b>Не выбранно</b></a></span>
+                <span class="all-ok"><a class="static"><b>Все верно</b></a></span>
+            </div>
+        </div>
+    </div>
+<div class="addresses">
+    <a href="/ha-stores/">Адреса салонов</a>
+</div>
+ -->
+<div class="socials">
+    <!-- 
+<a class="ifb" target="_blank" href="https://www.facebook.com/pages/Hilding-Anders/169031163262769?fref=ts"></a>
+    <a class="ivk" target="_blank" href="https://vk.com/hilding_anders"></a>
+    <a class="iyt" target="_blank" href="https://www.youtube.com/user/HildingAndersRU"></a>
+ -->
+    <a class="iin" target="_blank" href="https://instagram.com/hildinganders.kz?igshid=10yvj2majp9p1"></a>
+<!--   
+ <a class="iok" target="_blank" href="https://ok.ru/hildinganders"></a>
+ -->
+</div>
+<ul class="menu">
+    <!-- <li><a class="action" href="/promo/">Акции</a></li> -->
+    <li><span>Компания</span>
+        <ul>
+            <li><a href="/o-kompanii/">О компании</a></li>
+            <li><a href="/o-kompanii/brands/">Бренды</a></li>
+            <li><a href="/o-kompanii/issledovatelskaya-laboratoriya-hilding-anders-sleeplab/">Лаборатория Sleep Lab</a></li>
+            <li><a href="/news/">Пресс-центр</a></li>
+           <!-- <li><a href="/o-kompanii/3d-models/">3D модели кроватей и диванов</a></li> -->
+        </ul>
+    </li>
+    <li><a href="/customer/dostavka/">Доставка</a></li>
+    <li><span>Покупателям</span>
+        <ul>
+            <li><a href="/customer/kak-oformit-rassrochka-ru/">Как оформить заказ</a></li>
+            <li><a href="/customer/kak-vybrat-podushku/">Как выбрать подушку</a></li>
+            <li><a href="/customer/kak-vybrat-krovat/">Как выбрать кровать</a></li>
+            <li><a href="/customer/documents/">Сертификация продукции</a></li>
+            <li><a href="/customer/rasshirennaya-garantiya/">Расширенная гарантия</a></li>
+            <li><a href="/customer/garantiya-vozvrata-i-obmena/">Гарантия возврата</a></li>
+            <li><a href="/customer/kak-oformit-rassrochka-ru/">Рассрочка платежа</a></li>
+            <li><a href="/customer/dostavka/">Доставка</a></li>
+            <li><a href="/customer/vozvrat-i-obmen/">Возврат и обмен</a></li>
+           <!-- <li><a href="/customer/video/">Видео</a></li>
+            <li><a href="/customer/stati/">Статьи</a></li>-->
+        </ul>
+    </li>
+   <!-- <li><span>Партнерам</span>
+        <ul>
+            <li><a href="/franchising/">Франчайзинг</a></li>
+            <li><a href="/hotel-offer/">Предложение для отелей</a></li>
+        </ul>
+</ul>
+-->
+<li><span><a href="/customer/video/">Видео</a></span></li>
+</ul></div>
+</div>
+<!--</div>-->
+</div>
+
+
+<div class="Z_SECTION header">
+    <div class="Z_SECTION wrap cf">
+    <div class="logo">
+	<a href="/"><img alt="" src="{{logo}}"></a>
+</div><div class=" top-search">
+        <div class="search-bar">
+    <form action="https://hildinganders.kz/" name="search_form" method="get" class="cm-processed-form">
+        <input type="hidden" name="subcats" value="Y">
+        <input type="hidden" name="status" value="A">
+        <input type="hidden" name="pshort" value="Y">
+        <input type="hidden" name="pfull" value="Y">
+        <input type="hidden" name="pname" value="Y">
+        <input type="hidden" name="pkeywords" value="Y">
+        <input type="hidden" name="search_performed" value="Y">
+                    <input type="hidden" value="products.search" name="dispatch">
+        
+        
+
+        <input name="q" value="" id="search_input" title="Искать товары" placeholder="Поиск по сайту" class="search-field"><button type="submit"></button>
+
+            </form>
+    <div class="s-results">
+        <div class="cat-name">Товары</div>
+        <table>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+    </div><div class="phone-bar">
+  <div><a target="_blank" href="https://wa.me/77753322333" style="color:rgb(35, 31, 32);text-decoration:none;font-size:15px;font-weight:500;"><img style="margin-right: 3px;width: 24px;" src="/images/wpp.png" alt="">+7 775 332 23 33</a></div>
+  
+<a class="open-popup  " href="#call_requests_form_call_request_" id="one-click-open-popup" data-product-name="" data-product-id="">Обратный звонок</a>
+    
+    
+
+
+<div id="call_requests_form_call_request_" class="popup">
+    <div class="form-popup">
+        <form name="call_requests_form_main" id="form_call_request__desktop" action="https://hildinganders.kz/" method="post" class="cm-ajax cm-processed-form">
+                    
+                        <div class="h3">Заказ обратного звонка</div>
+
+            <input type="hidden" name="call_data[city]" value="">
+            <input type="hidden" name="call_data[region]" value="">
+
+            <div class="fieldset">
+                <div class="note">
+                    Заполните краткую контактную информацию. Наши сотрудники свяжутся с вами в рабочее время и ответят на все возникшие вопросы.
+                </div>
+            </div>
+
+            <div class="fieldset">
+                <div class="field f-text">
+                    <label style="display:none" for="call_data_call_request__name_desktop" class="cm-required"></label>
+                    <input type="text" class="tx medium" placeholder="Имя *" id="call_data_call_request__name_desktop" name="call_data[name]">
+                </div>
+            </div>
+            <div class="fieldset">
+                <div class="field f-text">
+                    <label style="display:none" for="call_data_call_request__phone_desktop" class="cm-required"></label>
+                    <input type="text" class="tx medium" placeholder="Телефон *" id="call_data_call_request__phone_desktop" name="call_data[phone]">
+                </div>
+            </div>
+            <div class="fieldset">
+                <div class="field f-checkbox">
+                    <label class="checkbox checked cm-required"><input type="checkbox" checked="checked"><b>Согласен на обработку персональных данных (см <a href="/politika-zashhity-i-obrabotki-personalnyh-dannyh/">Политика защиты и обработки персональных данных</a>)</b></label>
+                </div>
+            </div>
+            <div class="fieldset">
+                <div class="submit">
+                     <button class="gbutton invert pad block" type="submit" name="dispatch[call_requests.request]">Заказать звонок</button>
+                    <script>
+                        $('body').delegate('.fancybox-inner #form_call_request__desktop .submit button', 'click', function(e){
+                            function check_failed1() {
+                                var pole = $("body").find(".fancybox-inner .cm-failed-field");
+                                if (pole.length==0) {
+                                    
+                                    
+if(dataLayer)
+{
+    dataLayer.push({'event':'callback'});
+}
+
+                                    $.fancybox.close();
+                                }
+                            }
+                            setTimeout(check_failed1, 2000);
+                        });
+                    </script>
+                </div>
+            </div>
+                    </form>
+    </div>
+</div>
+    		<script>
+            window.ajaxPageCache.then(
+                data => insertContentAjax("#form_call_request__desktop", data),
+                error => console.log(error)
+            );
+		</script>
+    
+
+
+</div>
+<div class="phone-params">
+  Бесплатно по Казахстану
+  <div>с  10:00 до 20:00 <br>
+без выходных
+</div>
+</div><div class=" short-cart-wrapper">
+        
+<div class="_ty-dropdown-box" id="cart_status_418">
+    <div id="sw_dropdown_418" class="_ty-dropdown-box__title _cm-combination">
+        
+                <a class="lin cb c-cart" href=""><span>0</span></a>
+                
+
+    </div>
+        
+        <div class="short-cart _cm-cart-content _cm-cart-content-thumb _cm-cart-content-delete">
+        <div class="_ty-cart-items">
+                        <div class="_ty-cart-items__empty _ty-center">Корзина пуста</div>
+                    </div>
+
+    
+
+</div>
+<!--cart_status_418--></div>
+
+
+
+    </div><span class="cb c-compare pse-link" data-tooltip="Перейти к сравнению" data-link="/index.php?dispatch=product_features.compare"><span id="compare_link" style="display:none">0</span></span><a data-target="#user-menu" class="cb c-user open-popup" href="#enter-popup"></a>
+
+	<div id="account_forms_container"><div id="enter-popup" class="popup" style="display: none;">
+
+        <span class="h3-alt">Войти как пользователь</span>
+        <div class="social-enter cf">
+            <div class="add-socials">
+                <div class="ulogin_block"><p>Войти через соц. сеть:</p>
+	<div class="ulogin_panel" data-uloginid="3e962ccb" data-ulogin="redirect_uri=https%3A%2F%2Fhildinganders.kz%2Findex.php%3Fdispatch%3Dulogin.login%26backurl%3Dhttps%253A%252F%252Fhildinganders.kz%252Findex.php%253Fdispatch%253Dauth.get_forms_html"></div></div><div style="clear:both"></div>
+                
+
+            </div>
+        </div>
+
+
+        <span class="h4">Войти как пользователь Hilding-Anders.ru</span>
+        <p>Вы еще не зарегистрированы у нас? <a class="open-popup" href="#register-popup"><b>Зарегистрируйтесь</b></a></p>
+        <div class="form-popup">
+
+        <form class="action" name="popup_form" action="https://hildinganders.kz/" method="post">
+            <input type="hidden" name="return_url" value="https://hildinganders.kz/">
+            <input type="hidden" name="redirect_url" value="https://hildinganders.kz/">
+
+            
+            <div class="fieldset">
+                <div class="field f-text">
+                    <label style="display:none" for="login_popup" class="ty-login__filed-label ty-control-group__label cm-required cm-trim cm-email">E-mail</label>
+                    <input type="text" placeholder="E-mail" class="tx" id="login_popup" name="user_login" size="30" value="">
+                </div>
+            </div>
+
+            <div class="fieldset">
+                <div class="field f-text">
+                    <label style="display:none" for="psw_popup" class="ty-login__filed-label ty-control-group__label ty-password-forgot__label cm-required">Пароль</label>
+                    <input type="password" placeholder="Пароль" class="tx" id="psw_popup" name="password" size="30" value="" maxlength="32">
+                </div>
+            </div>
+
+            
+
+            
+            <div class="fieldset" id="enter-popup-failed-login" style="display:none">
+                <div class="field f-text">
+                    Введите корректный логин/пароль
+                </div>
+            </div>
+
+            <div class="fieldset">
+                <div class="submit">
+                     <a class="gbutton invert pad block cm-submit-fancybox fancybox.ajax text-button-act" data-ca-dispatch="dispatch[auth.login]">Войти</a>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <br><a class="open-popup short-style" href="#forgot-popup"><b>Забыли пароль?</b></a>
+
+
+</div>
+
+    <div id="register-popup" class="popup" style="display: none;">
+        <div class="h3">Регистрация</div>
+        <div class="form-popup">
+
+        <form class="action" name="profiles_register_form" action="https://hildinganders.kz/" method="post">
+            <div class="fieldset">
+                <div class="note">
+                    Вы зарегистрированы в нашем  магазине? <a class="open-popup" href="#enter-popup"><b>Войдите</b></a>
+                </div>
+            </div>
+
+            <div class="fieldset">
+                <div class="field f-text">
+                    <label style="display:none" for="elm_email" class="cm-required cm-email">E-mail<i>*</i></label>
+                    <input type="text" id="elm_email" placeholder="E-mail" class="tx" name="user_data[email]" size="32" value="">
+                </div>
+            </div>
+
+            <div class="fieldset">
+                <div class="field f-text">
+                    <input type="text" placeholder="Телефон" class="tx" value="" size="32" name="user_data[s_phone]" x-autocompletetype="phone-full">
+                </div>
+            </div>
+            <div class="fieldset">
+                <div class="field f-text">
+                    <input type="password" placeholder="Пароль" class="tx cm-autocomplete-off" maxlength="32" size="32" name="user_data[password1]" id="password1" autocomplete="off">
+                </div>
+            </div>
+            <div class="fieldset">
+                <div class="field f-text">
+                    <input type="password" placeholder="Повтор пароля" class="tx cm-autocomplete-off" maxlength="32" size="32" name="user_data[password2]" id="password2" autocomplete="off">
+                </div>
+            </div>
+            <div class="fieldset">
+                <div class="field f-checkbox">
+                    <label class="checkbox accept_mails checked"><input type="checkbox" checked="checked" name="user_data[accept_mails]" value="1"><b>Я хочу получать информацию об акциях на почту</b></label>
+                    
+                    <input type="hidden" name="user_data[register_user]" value="1">
+
+                                                                        <input class="mailing_list" type="hidden" name="mailing_lists[]" value="1">
+                                            
+                </div>
+            </div>
+            <div class="fieldset">
+                <div class="field f-checkbox">
+                    <label class="checkbox checked cm-required"><input type="checkbox" checked="checked"><b>Согласен на обработку персональных данных (см <a href="/politika-zashhity-i-obrabotki-personalnyh-dannyh/">Политика защиты и обработки персональных данных</a>)</b></label>
+                </div>
+            </div>
+            
+            <div class="fieldset">
+                <div class="submit">
+                     <button class="gbutton invert pad block" type="submit" name="dispatch[profiles.update]">Регистрация</button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+<div class="popup" id="forgot-popup">
+	<div class="popup-wrapper">
+		<div class="text">Пожалуйста, укажите ваш E-mail. <br>На него придут инструкции по восстановлению пароля</div>
+		<form action="#" name="recoverfrm" method="post">
+			<div class="forgot-form cf">
+				<div class="lside"><div class="in">
+					<input type="text" class="tx medium" id="login_id" name="user_email" size="30" value="" placeholder="E-mail">
+				</div></div>
+				<div class="rside">
+					
+					 <button class="gbutton invert" type="submit" name="dispatch[auth.recover_password]">Сбросить пароль</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div></div>
+</div>
+</div>
+{{ menu }}
